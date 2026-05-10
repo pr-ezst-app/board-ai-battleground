@@ -4,89 +4,52 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 30 25% 10%;
+    --foreground: 38 55% 88%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 28 30% 13%;
+    --card-foreground: 38 55% 88%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 28 30% 13%;
+    --popover-foreground: 38 55% 88%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 38 72% 55%;
+    --primary-foreground: 28 40% 10%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 28 30% 18%;
+    --secondary-foreground: 38 55% 88%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 28 20% 18%;
+    --muted-foreground: 36 30% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 20 60% 45%;
+    --accent-foreground: 38 55% 92%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 38 55% 92%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 30 25% 22%;
+    --input: 30 25% 22%;
+    --ring: 38 72% 55%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
-    --sidebar-background: 0 0% 98%;
+    --wood-dark: #2d1b0e;
+    --wood-mid: #5c3317;
+    --wood-light: #8b5e3c;
+    --gold: #c9973a;
+    --gold-light: #e8c16a;
+    --parchment: #f2e4c4;
+    --ink: #1a0f05;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 28 30% 13%;
+    --sidebar-foreground: 38 55% 88%;
+    --sidebar-primary: 38 72% 55%;
+    --sidebar-primary-foreground: 28 40% 10%;
+    --sidebar-accent: 28 20% 18%;
+    --sidebar-accent-foreground: 38 55% 88%;
+    --sidebar-border: 30 25% 22%;
+    --sidebar-ring: 38 72% 55%;
   }
 }
 
@@ -97,5 +60,291 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: "Crimson Text", Georgia, serif;
+    background-color: var(--wood-dark);
+    background-image:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.012) 2px,
+        rgba(255, 255, 255, 0.012) 4px
+      ),
+      repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 40px,
+        rgba(0, 0, 0, 0.08) 40px,
+        rgba(0, 0, 0, 0.08) 42px
+      );
+  }
+}
+
+@layer utilities {
+  .font-cinzel {
+    font-family: "Cinzel", serif;
+  }
+  .font-crimson {
+    font-family: "Crimson Text", Georgia, serif;
+  }
+  .font-fell {
+    font-family: "IM Fell English", Georgia, serif;
+  }
+
+  .wood-grain {
+    background-color: var(--wood-mid);
+    background-image:
+      repeating-linear-gradient(
+        88deg,
+        transparent,
+        transparent 3px,
+        rgba(255, 255, 255, 0.03) 3px,
+        rgba(255, 255, 255, 0.03) 6px
+      ),
+      repeating-linear-gradient(
+        92deg,
+        transparent,
+        transparent 5px,
+        rgba(0, 0, 0, 0.06) 5px,
+        rgba(0, 0, 0, 0.06) 8px
+      );
+  }
+
+  .wood-dark-grain {
+    background-color: var(--wood-dark);
+    background-image: repeating-linear-gradient(
+      89deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 255, 255, 0.02) 4px,
+      rgba(255, 255, 255, 0.02) 7px
+    );
+  }
+
+  .parchment-bg {
+    background-color: #f0ddb0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+  }
+
+  .gold-border {
+    border: 2px solid var(--gold);
+    box-shadow:
+      0 0 0 1px rgba(201, 151, 58, 0.2),
+      inset 0 0 0 1px rgba(201, 151, 58, 0.1);
+  }
+
+  .gold-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      var(--gold-light),
+      var(--gold),
+      transparent
+    );
+  }
+
+  .ornament-border {
+    border: 1px solid rgba(201, 151, 58, 0.4);
+    box-shadow:
+      0 0 20px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(201, 151, 58, 0.2),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .text-gold {
+    color: var(--gold);
+  }
+  .text-gold-light {
+    color: var(--gold-light);
+  }
+  .text-parchment {
+    color: var(--parchment);
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg, #c9973a 0%, #e8c16a 50%, #c9973a 100%);
+    color: var(--ink);
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-gold:hover {
+    background: linear-gradient(135deg, #e8c16a 0%, #f5d888 50%, #e8c16a 100%);
+    box-shadow:
+      0 4px 16px rgba(201, 151, 58, 0.4),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+  }
+  .btn-gold:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .btn-wood {
+    background: linear-gradient(135deg, #5c3317 0%, #7a4a25 50%, #5c3317 100%);
+    color: var(--parchment);
+    font-family: "Cinzel", serif;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(201, 151, 58, 0.3);
+    box-shadow:
+      0 2px 8px rgba(0, 0, 0, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+  }
+  .btn-wood:hover {
+    background: linear-gradient(135deg, #7a4a25 0%, #9a5f30 50%, #7a4a25 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+  }
+
+  .card-wood {
+    background-color: #3d2010;
+    background-image: repeating-linear-gradient(
+      91deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 255, 255, 0.025) 4px,
+      rgba(255, 255, 255, 0.025) 7px
+    );
+    border: 1px solid rgba(201, 151, 58, 0.25);
+    box-shadow:
+      0 4px 24px rgba(0, 0, 0, 0.6),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .trophy-gold {
+    color: #f5c842;
+    filter: drop-shadow(0 0 6px rgba(245, 200, 66, 0.5));
+  }
+  .trophy-silver {
+    color: #c0c8d0;
+    filter: drop-shadow(0 0 4px rgba(192, 200, 208, 0.4));
+  }
+  .trophy-bronze {
+    color: #cd7f32;
+    filter: drop-shadow(0 0 4px rgba(205, 127, 50, 0.4));
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes shimmer {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+  @keyframes pulse-gold {
+    0%,
+    100% {
+      box-shadow: 0 0 8px rgba(201, 151, 58, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(201, 151, 58, 0.6);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+  .animate-fade-up-delay-1 {
+    animation: fadeInUp 0.6s ease 0.1s both;
+  }
+  .animate-fade-up-delay-2 {
+    animation: fadeInUp 0.6s ease 0.2s both;
+  }
+  .animate-fade-up-delay-3 {
+    animation: fadeInUp 0.6s ease 0.3s both;
+  }
+  .animate-fade-up-delay-4 {
+    animation: fadeInUp 0.6s ease 0.4s both;
+  }
+  .animate-pulse-gold {
+    animation: pulse-gold 3s ease-in-out infinite;
+  }
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      var(--gold) 0%,
+      var(--gold-light) 40%,
+      #fff8e7 50%,
+      var(--gold-light) 60%,
+      var(--gold) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmer 4s linear infinite;
+  }
+
+  .dice-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ink);
+  }
+
+  .online-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+  @keyframes pulse-dot {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .rank-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Cinzel", serif;
+    font-weight: 700;
+    font-size: 13px;
   }
 }

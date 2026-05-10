@@ -7,7 +7,7 @@ const GAMES = [
   { id: 1, name: "Chess", emoji: "♟️", players: "2", time: "30–90 min", online: 142, tag: "Strategy" },
   { id: 2, name: "Backgammon", emoji: "🎲", players: "2", time: "20–40 min", online: 89, tag: "Classic" },
   { id: 3, name: "Checkers", emoji: "🔴", players: "2", time: "15–30 min", online: 67, tag: "Classic" },
-  { id: 4, name: "Mahjong", emoji: "🀄", players: "2–4", time: "60–120 min", online: 54, tag: "Tile" },
+  { id: 4, name: "Scrabble", emoji: "🔤", players: "2–4", time: "45–90 min", online: 54, tag: "Word" },
   { id: 5, name: "Dominoes", emoji: "⬛", players: "2–4", time: "20–45 min", online: 38, tag: "Tile" },
   { id: 6, name: "Catan", emoji: "🏝️", players: "3–4", time: "60–120 min", online: 29, tag: "Strategy" },
 ];
